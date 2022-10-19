@@ -1,9 +1,9 @@
 let gridSide = 16;
 
 function setGrid(gridSide) {
-    gridSide = prompt("Enter the number of squares you would like each side of the grid to have (must be less than 100):");
-    while(gridSide.length > 2 | gridSide.length == 0 | isNaN(gridSide) == true) {
-        gridSide = prompt("Please ensure your input is a number less than 100");
+    gridSide = prompt("Enter the number of squares you would like each side of the grid to have (must be between 1 and 100):");
+    while(isNaN(gridSide) == true | gridSide > 100 | gridSide < 1) {
+        gridSide = prompt("Please ensure your input is a number from 1 to 100");
     }
     console.log(gridSide);
     generateGrid(gridSide);
