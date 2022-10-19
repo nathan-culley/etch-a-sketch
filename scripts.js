@@ -15,8 +15,8 @@ generateGrid(gridSide);
 function generateGrid(gridSide) {
     let gridTotal = gridSide * gridSide;
     console.log(gridSide, gridTotal);
-    //let root = document.documentElement;
-    //root.style.setProperty('--grid-side', gridSide);
+    let root = document.documentElement;
+    root.style.setProperty('--grid-side', gridSide);
     const wholeGrid = document.getElementById('wholeGrid');
     //wholeGrid.setAttribute("style", "grid-template-columns:${gridSide}")
     
