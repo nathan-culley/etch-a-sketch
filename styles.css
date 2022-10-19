@@ -1,5 +1,7 @@
 :root {
     --grid-side: 16;
+    --random-hue: 0;
+    --random-saturation: 0;
 }
 
 .grid-container {
@@ -19,5 +21,5 @@
 }
 
 .hover {
-    background-color: black;
+    background-color: hsl(var(--random-hue) var(--random-saturation));
 }

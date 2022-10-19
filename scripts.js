@@ -1,10 +1,10 @@
 let gridSide = 16;
 
-//const setGrid = document.getElementById("set-grid");
-//setGrid.eventListener('onclick', )
-
 function setGrid(gridSide) {
-    gridSide = prompt("Enter the number of squares you would like each side of the grid to have:");
+    gridSide = prompt("Enter the number of squares you would like each side of the grid to have (must be less than 100):");
+    while(gridSide.length > 2 | gridSide.length == 0 | isNaN(gridSide) == true) {
+        gridSide = prompt("Please ensure your input is a number less than 100");
+    }
     console.log(gridSide);
     generateGrid(gridSide);
     
@@ -18,7 +18,6 @@ function generateGrid(gridSide) {
     let root = document.documentElement;
     root.style.setProperty('--grid-side', gridSide);
     const wholeGrid = document.getElementById('wholeGrid');
-    //wholeGrid.setAttribute("style", "grid-template-columns:${gridSide}")
     
     while (wholeGrid.firstChild) {
         wholeGrid.removeChild(wholeGrid.lastChild);
